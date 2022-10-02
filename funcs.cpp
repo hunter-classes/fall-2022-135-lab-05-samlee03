@@ -37,3 +37,19 @@ int nextPrime(int n){
   return 0;
 }
   
+int countPrimes(int a, int b){
+  int count = 0;
+  for (int i = a; i <= b; i++){
+    if (isPrime(i)){
+      count++;
+    }
+  }
+  return count;
+}
+
+bool isTwinPrime(int n){
+  if (isPrime(n-2) || isPrime(n+2)){
+    return true;
+  }
+  return false;
+}

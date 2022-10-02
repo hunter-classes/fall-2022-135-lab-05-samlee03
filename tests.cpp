@@ -25,3 +25,15 @@ TEST_CASE("nextPrime Function"){
   CHECK(nextPrime(900) == 907);
 }
 
+TEST_CASE("countPrime Function"){
+  CHECK(countPrimes(-5, -1) == 0);
+  CHECK(countPrimes(0, 2) == 1);
+  CHECK(countPrimes(2, 100) == 25);
+  CHECK(countPrimes(-5, 100) == 25);
+}
+TEST_CASE("isTwinPrime Function"){
+  CHECK(isTwinPrime(2) == false);
+  CHECK(isTwinPrime(5) == true);
+  CHECK(isTwinPrime(89) == false);
+  CHECK(isTwinPrime(43) == true);
+}
