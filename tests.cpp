@@ -13,7 +13,15 @@ TEST_CASE("isPrime Function"){
   CHECK(isPrime(-1) == false);
   CHECK(isPrime(1) == false);
   CHECK(isPrime(2) == true);
+  CHECK(isPrime(15) == false);
   CHECK(isPrime(19) == true);
   CHECK(isPrime(47) == true);
+}
+
+TEST_CASE("nextPrime Function"){
+  CHECK(nextPrime(-1) == 2);
+  CHECK(nextPrime(14) == 17);
+  CHECK(nextPrime(17) == 19);
+  CHECK(nextPrime(900) == 907);
 }
 

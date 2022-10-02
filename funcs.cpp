@@ -16,13 +16,24 @@ bool isDivisibleBy(int n, int d)
 bool isPrime(int n){
   if (n < 2){
     return false;
-  }
+  } 
   for (int i = 2; i < n; i++){
     if (isDivisibleBy(n, i)){
       return false;
     }
   }
+  return true;
 }
 
+int nextPrime(int n){
+  int number = n + 1;
+  while (true){
+    if (isPrime(number)){
+      return number;
+    }
+    number++;
+  }
 
+  return 0;
+}
   
