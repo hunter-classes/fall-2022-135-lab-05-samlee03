@@ -34,6 +34,18 @@ TEST_CASE("countPrime Function"){
 TEST_CASE("isTwinPrime Function"){
   CHECK(isTwinPrime(2) == false);
   CHECK(isTwinPrime(5) == true);
+  CHECK(isTwinPrime(9) == false);
   CHECK(isTwinPrime(89) == false);
   CHECK(isTwinPrime(43) == true);
+}
+TEST_CASE("nextTwinPrime Function"){
+  CHECK(nextTwinPrime(2) == 3);
+  CHECK(nextTwinPrime(-5) == 3);
+  CHECK(nextTwinPrime(300) == 311);
+}
+TEST_CASE("largestTwinPrime"){
+  CHECK(largestTwinPrime(-100, 0) == -1);
+  CHECK(largestTwinPrime(2, 9) == 7);
+  CHECK(largestTwinPrime(1, 31) == 31);
+  CHECK(largestTwinPrime(14, 16) == -1);
 }
